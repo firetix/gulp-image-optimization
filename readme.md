@@ -26,7 +26,7 @@ gulp.task('images', function(cb) {
         interlaced: true
     })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
 });
-
+```
 
 ## API
 
