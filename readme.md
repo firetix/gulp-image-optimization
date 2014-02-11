@@ -17,7 +17,7 @@ npm install --save-dev gulp-image-optimization
 
 ```js
 var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
+var imagemin = require('gulp-image-optimization');
 
 gulp.task('images', function(cb) {
     gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imagemin({
