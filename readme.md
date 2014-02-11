@@ -9,7 +9,7 @@
 Install with [npm](https://npmjs.org/package/gulp-image-optimization)
 
 ```
-npm install --save-dev gulp-imagemin
+npm install --save-dev gulp-image-optimization
 ```
 
 
@@ -19,12 +19,13 @@ npm install --save-dev gulp-imagemin
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 
-gulp.task('default', function () {
-	gulp.src('src/image.png')
-		.pipe(imagemin())
-		.pipe(gulp.dest('dist'));
+gulp.task('images', function(cb) {
+    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imagemin({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest('public/images')).on('end', cb).on('error', cb);
 });
-```
 
 
 ## API
