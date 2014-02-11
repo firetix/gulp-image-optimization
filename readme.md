@@ -4,10 +4,9 @@
 
 *Issues with the output should be reported on the image-min [issue tracker](https://github.com/kevva/image-min/issues).*
 
-
 ## Install
 
-Install with [npm](https://npmjs.org/package/gulp-imagemin)
+Install with [npm](https://npmjs.org/package/gulp-image-optimization)
 
 ```
 npm install --save-dev gulp-imagemin
@@ -37,4 +36,4 @@ See the image-min [options](https://github.com/kevva/image-min#options).
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Mohamed Rachidi](http://sindresorhus.com)
