@@ -15,7 +15,7 @@ npm install --save-dev gulp-image-optimization
 
 ## Example
 
-```js
+```
 var gulp = require('gulp');
 var imageop = require('gulp-image-optimization');
 
@@ -37,4 +37,4 @@ See the image-min [options](https://github.com/kevva/image-min#options).
 
 ## License
 
-MIT © [Mohamed Rachidi](http://sindresorhus.com)
+MIT © [Mohamed Rachidi]
