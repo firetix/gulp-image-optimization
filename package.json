@@ -3,7 +3,7 @@
     "version": "0.1",
     "description": "Minify PNG, JPEG and GIF images. this is based on https://github.com/sindresorhus/gulp-imagemin with stream-limit implementation",
     "license": "MIT",
-    "repository": "firetix/gulp-imagemin",
+    "repository": "firetix/gulp-image-optimization",
     "author": {
         "name": "Mohamed Rachidi",
         "email": "rachidi29@gmail.com"
