@@ -17,10 +17,10 @@ npm install --save-dev gulp-image-optimization
 
 ```js
 var gulp = require('gulp');
-var imagemin = require('gulp-image-optimization');
+var imageop = require('gulp-image-optimization');
 
 gulp.task('images', function(cb) {
-    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imagemin({
+    gulp.src(['src/**/*.png','src/**/*.jpg','src/**/*.gif','src/**/*.jpeg']).pipe(imageop({
         optimizationLevel: 5,
         progressive: true,
         interlaced: true
@@ -30,7 +30,7 @@ gulp.task('images', function(cb) {
 
 ## API
 
-### imagemin(options)
+### imageop(options)
 
 See the image-min [options](https://github.com/kevva/image-min#options).
 
