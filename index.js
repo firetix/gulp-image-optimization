@@ -14,23 +14,23 @@ module.exports = function(options) {
         }
 
         if (file.isStream()) {
-            return cb(new gutil.PluginError('gulp-imagemin', 'Streaming not supported'));
+            return cb(new gutil.PluginError('gulp-image-optimization', 'Streaming not supported'));
         }
 
         if (['.jpg', '.jpeg', '.png', '.gif'].indexOf(path.extname(file.path)) === -1) {
-            gutil.log('gulp-imagemin: Skipping unsupported image ' + gutil.colors.blue(file.relative));
+            gutil.log('gulp-image-optimization: Skipping unsupported image ' + gutil.colors.blue(file.relative));
             return cb(null, file);
         }
 
         tempWrite(file.contents, path.extname(file.path), function(err, tempFile) {
             if (err) {
-                return cb(new gutil.PluginError('gulp-imagemin', err));
+                return cb(new gutil.PluginError('gulp-image-optimization', err));
             }
 
             // workaround: https://github.com/kevva/image-min/issues/8
             fs.stat(tempFile, function(err, stats) {
                 if (err) {
-                    return cb(new gutil.PluginError('gulp-imagemin', err));
+                    return cb(new gutil.PluginError('gulp-image-optimization', err));
                 }
 
                 var origSize = stats.size;
@@ -38,7 +38,7 @@ module.exports = function(options) {
                 imagemin(tempFile, tempFile, options, function() {
                     fs.readFile(tempFile, function(err, data) {
                         if (err) {
-                            return cb(new gutil.PluginError('gulp-imagemin', err));
+                            return cb(new gutil.PluginError('gulp-image-optimization', err));
                         }
 
                         var saved = origSize - data.length;
@@ -46,7 +46,7 @@ module.exports = function(options) {
                             round: 1
                         }) : 'already optimized';
 
-                        gutil.log('gulp-imagemin:', gutil.colors.green('✔ ') + file.relative + gutil.colors.gray(' (' + savedMsg + ')'));
+                        gutil.log('gulp-image-optimization:', gutil.colors.green('✔ ') + file.relative + gutil.colors.gray(' (' + savedMsg + ')'));
 
                         file.contents = data;
                         cb(null, file);

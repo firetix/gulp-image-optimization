@@ -1,4 +1,4 @@
-# [gulp](https://github.com/wearefractal/gulp)-image-optimization [![Build Status](https://secure.travis-ci.org/sindresorhus/gulp-imagemin.png?branch=master)](http://travis-ci.org/sindresorhus/gulp-imagemin)
+# [gulp](https://github.com/wearefractal/gulp)-image-optimization 
 
 > Minify PNG, JPEG and GIF images with [image-min](https://github.com/kevva/image-min)
 
