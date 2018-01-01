@@ -9,7 +9,7 @@
         "email": "rachidi29@gmail.com"
     },
     "engines": {
-        "node": ">=0.10.0"
+        "node": "<6.0.0"
     },
     "scripts": {
         "test": "mocha"
@@ -19,7 +19,7 @@
     ],
     "keywords": [
         "gulpplugin",
-        "image-min",
+        "imagemin",
         "image",
         "img",
         "picture",
@@ -33,12 +33,12 @@
         "gif"
     ],
     "dependencies": {
-        "gulp-util": "~2.2.0",
-        "image-min": "~0.1.0",
-        "graceful-fs": "~2.0.0",
-        "filesize": "~2.0.0",
-        "temp-write": "~0.1.0",
-        "map-stream-limit": "~1.0.2",
+        "gulp-util": "~3.0.8",
+        "imagemin": "~5.3.1",
+        "graceful-fs": "~4.1.11",
+        "filesize": "~3.5.11",
+        "temp-write": "~3.4.0",
+        "map-stream-limit": "~1.1.0",
         "jpegtran-bin": "^3.2.0"
     },
     "devDependencies": {
